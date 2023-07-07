@@ -4,9 +4,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @bookss = @user.books
+    @books = @user.books
     @book = Book.new
-    @books = @user.books.page(params[:page]).reverse_order
     @today_book =  @books.created_today
     @yesterday_book = @books.created_yesterday
     @this_week_book = @books.created_this_week
