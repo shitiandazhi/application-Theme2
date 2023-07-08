@@ -7,7 +7,13 @@
   <tr>
 	  <th>introduction</th>
 	  <th><%= user.introduction %></th>
-  </tr>
+	 </tr>
+	 <tr>
+	   <th> フォロー数: <%= user.followings.count %></th>
+	 </tr>
+	 <tr>
+    <th>フォロワー数: <%= user.followers.count %></th>
+    </tr>
 </table>
 
 <div class='row'>
