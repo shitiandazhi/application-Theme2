@@ -53,8 +53,10 @@
 	  <%= (@the_week_before * 100).round %>%</td>
         <% end %>
         </tr>
+        </tbody>
+        </table>
       <td><%= render 'count', book: @books %></td>
-      </tbody>
-    </table>
+      <td><%= render 'index_book', book: @books %></td>
+      <td><%= render 'search', book: @books %></td>
   </div>
 </div>
