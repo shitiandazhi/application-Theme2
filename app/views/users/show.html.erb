@@ -8,10 +8,10 @@
     </div>
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
-      <%= render 'books/index',books: @bookss %>
+      <%= render 'books/index',books: @books %>
     </div>
 
-      <h3>投稿数の前日比・前週比</h3>
+      <h4>投稿数の前日比・前週比</h4>
         <div class="table_width">
         <table class="table table-bordered">
          <thead>
@@ -21,7 +21,7 @@
         <th>前日比</th>
       </tr>
       </thead>
-      
+
       <tbody>
         <tr>
 	  <td><%= @today_book.count %></td>
@@ -34,9 +34,7 @@
         <% end %>
         </tr>
       </tbody>
-    </table>
 
-    <table class="table table-bordered">
       <thead>
       <tr>
         <th>今週の投稿</th>
@@ -55,6 +53,7 @@
 	  <%= (@the_week_before * 100).round %>%</td>
         <% end %>
         </tr>
+      <td><%= render 'count', user: @user %></td>
       </tbody>
     </table>
   </div>
